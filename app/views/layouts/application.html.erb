@@ -11,8 +11,17 @@
 
   <body>
     <% if user_signed_in? %>
+      <!--<li>-->
+      <!--  <%= link_to "Home", destroy_user_session_path %>-->
+      <!--</li>-->
+      <!--<li>-->
+      <!--  <%= link_to "Users", destroy_user_session_path %>-->
+      <!--</li>-->
+      <!--<li>-->
+      <!--  <%= link_to "Books", destroy_user_session_path %>-->
+      <!--</li>-->
       <li>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       </li>
     <% else %>
       <li>
