@@ -1,8 +1,7 @@
-<main>
   <p id="notice"></p>
   <div class='container'>
     <div class='row'>
-      <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0">
+      <div class="col-5 px-0">
         <h2>Sign up</h2>
 
         <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
@@ -16,7 +15,7 @@
 
           <div class="field">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <%= f.email_field :email, autocomplete: "email" %>
           </div>
 
           <div class="field">
@@ -42,4 +41,3 @@
       </div>
     </div>
   </div>
-</main>
