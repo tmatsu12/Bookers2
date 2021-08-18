@@ -1,7 +1,19 @@
 <div class="container">
+
   <div class="row">
-    <div class="col-5 mx-auto">
-      <h2 class="mt-3">Editing Book</h2>
+    <div class="col-12 col-md-8 col-lg-5 mx-auto">
+      <h1 class="mt-0">Editing Book</h1>
+
+      <% if @book.errors.any? %>
+        <div id="error_explanation">
+          <h3><%= pluralize(@book.errors.count, "error") %> prohibited this object from being saved:</h3>
+          <ul>
+            <% @book.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
         <%= form_with model:@book, local:true do |f| %>
           <div class="form-group">
