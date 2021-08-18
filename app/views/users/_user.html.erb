@@ -1,5 +1,5 @@
 <table class="table">
-  <h2 class="mt-3">User info</h2>
+  <h2 class="mt-0">User info</h2>
   <thead>
     <tr>
       <%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg"%>
@@ -7,11 +7,11 @@
   </thead>
   <tbody>
     <tr>
-      <th>Name</th>
+      <th>name</th>
       <th><%= user.name %></th>
     </tr>
     <tr>
-      <th>Introduction</th>
+      <th>introduction</th>
       <th><%= user.introduction %></th>
     </tr>
   </tbody>
